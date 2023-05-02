@@ -4,9 +4,9 @@ body {
 }
 
 body {
-  --padding-w: 120px;
+  /* --padding-w: 120px;
   --logo-w: 113px;
-  --userbar-w: 122px;
+  --userbar-w: 122px; */
 
   font-family: "Roboto", sans-serif;
 }
@@ -61,16 +61,21 @@ body {
   display: flex;
   align-items: center;
   height: 50px;
+  /* border: 1px solid black; */
 }
 
 .header__search-input {
+  display: flex;
+  width: 100%;
   margin: 0 20px;
 }
 
 .header__search-input input {
-  width: calc(
+  /* width: calc(
     100vw - var(--logo-w) - var(--userbar-w) - var(--padding-w) * 2 - 40px * 2
-  );
+  ); */
+  flex-basis: auto;
+  flex-grow: 1;
   padding: 16px;
   font-style: normal;
   font-weight: 400;
@@ -80,6 +85,7 @@ body {
 
 .header__userbar {
   width: 112px;
+  min-width: 112px;
   height: 30px;
   border: 1px solid black;
 }
@@ -109,13 +115,69 @@ body {
 }
 
 .container__article {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  height: 340px;
+  height: 380px;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .container__article:hover {
   box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.11);
+}
+
+.container__article-like {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px;
+  height: 70px;
+}
+
+.container__article-wrapper-img {
+  align-self: center;
+  height: 150px;
+  width: 100%;
+}
+
+.container__article-img {
+  height: 100%;
+  width: auto;
+  margin: 0 30px;
+  background-image: url("./images/product_1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* border: 2px solid black; */
+}
+
+.container__article-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.container__article-info-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.container__article-info-subtitle {
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.container__article-info-value {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .footer {
