@@ -114,23 +114,49 @@ body {
   gap: 30px;
 }
 
+.container__article-wrapper {
+  position: relative;
+  height: 380px;
+}
+
 .container__article {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   height: 380px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.container__article:hover .container__article-subinfo {
+  display: flex;
+}
+
+.container__article:hover .container__article-btn {
+  display: flex;
 }
 
 .container__article:hover {
-  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  height: 480px;
+  background-color: white;
+  z-index: 1;
 }
 
 .container__article-like {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 0 25px;
   height: 70px;
+  min-height: 70px;
+}
+
+.container__article-like img {
+  height: 20px;
+  min-height: 20px;
+  width: 23px;
+  min-width: 23px;
 }
 
 .container__article-wrapper-img {
@@ -147,13 +173,16 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  /* border: 2px solid black; */
+}
+
+.container__article-info,
+.container__article-subinfo {
+  margin-left: 20px;
 }
 
 .container__article-info {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
   margin-top: 50px;
 }
 
@@ -178,6 +207,62 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+
+.container__article-subinfo {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  width: 200px;
+  margin-top: 15px;
+}
+
+.container__article-subinfo-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.container__subinfo-box-with-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__article-box-titel,
+.container__article-box-value {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
+
+.container__article-box-titel {
+  color: #c4c4c4;
+}
+
+.container__subinfo-box-with-svg img {
+  height: 8px;
+  min-height: 8px;
+  width: 8px;
+  min-width: 8px;
+}
+
+.container__article-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 15px 20px 0 20px;
+  background-color: #245462;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+
+.container__article-btn:active {
+  background-color: #313131;
 }
 
 .footer {
